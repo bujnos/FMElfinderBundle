@@ -56,6 +56,7 @@ class Configuration implements ConfigurationInterface
                                     ->scalarNode('driver')->defaultValue('LocalFileSystem')->end()
                                     ->scalarNode('path')->defaultValue('uploads')->end()
                                     ->scalarNode('url')->end()
+                                    ->scalarNode('upload_overwrite')->defaultValue(true)->end()
                                     ->arrayNode('upload_allow')
                                         ->prototype('scalar')->end()
                                         ->defaultValue(array('image'))
