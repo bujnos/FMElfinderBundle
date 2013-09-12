@@ -56,6 +56,7 @@ class FMElfinderLoader
                 'accessControl' => array($this, 'access'),
                 'uploadAllow'   => $parameter['upload_allow'],
                 'uploadDeny'    => $parameter['upload_deny'],
+                'uploadOverwrite'=> $parameter['upload_overwrite'],
                 'uploadMaxSize' => $parameter['upload_max_size']
             );
         }
