@@ -48,11 +48,7 @@ class FMElfinderLoader
                 'service'       => $driver,
                 'path'          => $path . '/',
                 'URL'           => isset($parameter['url']) && $parameter['url']
-                    ? strpos($parameter['url'], 'http') === 0
-                        ? $parameter['url']
-                        : sprintf('%s://%s%s/%s/', $request->getScheme(), $request->getHttpHost(), $request->getBasePath(), $parameter['url'])
-                    : $parameter['url']?:$request->getScheme() . '://' . $request->getHttpHost() . '/' . $path . '/',
-                'URL'           => $parameter['url']?:$request->getScheme() . '://' . $request->getHttpHost() . '/' . $path . '/',
+                    ?$parameter['url']: $parameter['url']?:$request->getScheme() . '://' . $request->getHttpHost() . '/' . $path . '/',
                 'accessControl' => array($this, 'access'),
                 'uploadAllow'   => $parameter['upload_allow'],
                 'uploadDeny'    => $parameter['upload_deny'],
