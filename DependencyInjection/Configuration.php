@@ -57,6 +57,7 @@ class Configuration implements ConfigurationInterface
                                     ->scalarNode('path')->defaultValue('uploads')->end()
                                     ->scalarNode('url')->end()
                                     ->scalarNode('upload_overwrite')->defaultValue(true)->end()
+                                    ->scalarNode('tmb_size')->defaultValue(48)->end()
                                     ->arrayNode('upload_allow')
                                         ->prototype('scalar')->end()
                                         ->defaultValue(array('image'))
