@@ -53,6 +53,7 @@ class FMElfinderLoader
                 'uploadAllow'   => $parameter['upload_allow'],
                 'uploadDeny'    => $parameter['upload_deny'],
                 'uploadOverwrite'=> $parameter['upload_overwrite'],
+                'tmbSize'       => $parameter['tmb_size'],
                 'uploadMaxSize' => $parameter['upload_max_size']
             );
         }
